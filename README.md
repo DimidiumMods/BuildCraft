@@ -1,5 +1,7 @@
 ## Welcome to BuildCraft on GitHub
 
+> **This branch (`1.21.1-neoforge`) is a work-in-progress port to Minecraft 1.21.1 / NeoForge. See [PORTING.md](PORTING.md) for layout, build steps and status.**
+
 ### Reporting an issue
 
 Please open an issue for a bug report only if:

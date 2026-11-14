@@ -1,0 +1,46 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/DimidiumMods/BuildCraft/issues"
+
+# Every BuildCraft module is its own mod id, all shipped in this one jar.
+# Add a [[mods]] block here as each module is ported.
+
+# ---------------------------------------------------------------- lib
+[[mods]]
+modId = "buildcraftlib"
+version = "${mod_version}"
+displayName = "BuildCraft Lib"
+logoFile = "assets/buildcraft/logo.png"
+authors = "${mod_authors}"
+description = '''Library mod used by BuildCraft.'''
+
+[[dependencies.buildcraftlib]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.buildcraftlib]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+# ---------------------------------------------------------------- core
+[[mods]]
+modId = "buildcraftcore"
+version = "${mod_version}"
+displayName = "BuildCraft"
+logoFile = "assets/buildcraft/logo.png"
+authors = "${mod_authors}"
+description = '''Extending Minecraft with pipes, auto-crafting, quarries, engines and much more!'''
+
+[[dependencies.buildcraftcore]]
+modId = "buildcraftlib"
+type = "required"
+versionRange = "[${mod_version}]"
+ordering = "AFTER"
+side = "BOTH"
